@@ -6,28 +6,32 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-
-      children: [
-        SizedBox(
-          height: 50,
-          width: 70,
-          child: Image.asset('assets/images/app_icons/ic_turkey.png'),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Text(
-            title,
-            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      child: Row(
+        children: [
+          Expanded(
+            child: Center(
+              child: Text(
+                "Hoş Geldiniz!",
+                style: TextStyle(
+                  color: const Color.fromARGB(255, 248, 50, 36),
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.4,
+                  shadows: [
+                    Shadow(
+                      offset: Offset(0, 3),
+                      blurRadius: 9,
+                      color: Colors.black38,
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
-        ),
-        SizedBox(
-          height: 50,
-          width: 70,
-          child: Image.asset('assets/images/app_icons/ic_turkey.png'),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
