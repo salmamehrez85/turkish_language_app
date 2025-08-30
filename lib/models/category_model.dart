@@ -12,4 +12,11 @@ class CategoryModel {
     required this.color,
     required this.destination,
   });
+
+  void goToDestination(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => destination),
+    );
+  }
 }

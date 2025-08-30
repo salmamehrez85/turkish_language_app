@@ -10,7 +10,7 @@ class Category extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      appBar: AppBar(title: CustomAppBar(title: '')),
+      appBar: AppBar(title: CustomAppBar(title: 'Hoş Geldiniz!')),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -37,9 +37,9 @@ class Category extends StatelessWidget {
             padding: EdgeInsets.all(24),
             crossAxisSpacing: 20,
             mainAxisSpacing: 20,
-            children: CategoriesList.categoryList.map((category) => CategoryWidget(
-              category: category,
-            )).toList(),
+            children: CategoriesList.categoryList
+                .map((category) => CategoryWidget(category: category))
+                .toList(),
           ),
         ),
       ),

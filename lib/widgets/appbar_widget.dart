@@ -13,7 +13,7 @@ class CustomAppBar extends StatelessWidget {
           Expanded(
             child: Center(
               child: Text(
-                "Hoş Geldiniz!",
+                title,
                 style: TextStyle(
                   color: const Color.fromARGB(255, 248, 50, 36),
                   fontSize: 30,

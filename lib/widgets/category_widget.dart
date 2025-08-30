@@ -10,7 +10,9 @@ class CategoryWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          category.goToDestination(context);
+        },
         style: ElevatedButton.styleFrom(
           backgroundColor: category.color,
           shape: RoundedRectangleBorder(
