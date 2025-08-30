@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:turkish_language_app/models/category_model.dart';
+import 'package:turkish_language_app/data/categories_list.dart';
 import 'package:turkish_language_app/widgets/appbar_widget.dart';
 import 'package:turkish_language_app/widgets/category_widget.dart';
 
@@ -10,7 +10,7 @@ class Category extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      appBar: AppBar(title: CustomAppBar(title: "Türkçe Öğrenelim")),
+      appBar: AppBar(title: CustomAppBar(title: '')),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -37,58 +37,9 @@ class Category extends StatelessWidget {
             padding: EdgeInsets.all(24),
             crossAxisSpacing: 20,
             mainAxisSpacing: 20,
-            children: [
-              CategoryWidget(
-                category: CategoryModel(
-                  image: 'assets/images/app_icons/ic_animals.png',
-                  title: 'Animals',
-                  color: Color.fromARGB(255, 219, 187, 198),
-                  destination: Scaffold(
-                    body: Center(child: Text("Animals Page")),
-                  ),
-                ),
-              ),
-              CategoryWidget(
-                category: CategoryModel(
-                  image: 'assets/images/app_icons/ic_colors.png',
-                  title: 'Colors',
-                  color: Color.fromARGB(255, 190, 219, 208),
-                  destination: Scaffold(
-                    body: Center(child: Text("Colors Page")),
-                  ),
-                ),
-              ),
-              CategoryWidget(
-                category: CategoryModel(
-                  image: 'assets/images/app_icons/ic_family_members.png',
-                  title: 'Family',
-                  color: Color.fromARGB(255, 222, 230, 213),
-                  destination: Scaffold(
-                    body: Center(child: Text("Family Page")),
-                  ),
-                ),
-              ),
-              CategoryWidget(
-                category: CategoryModel(
-                  image: 'assets/images/app_icons/ic_food_drinks.png',
-                  title: 'Food & Drinks',
-                  color: Color.fromARGB(255, 226, 223, 221),
-                  destination: Scaffold(
-                    body: Center(child: Text("Food & Drinks Page")),
-                  ),
-                ),
-              ),
-              CategoryWidget(
-                category: CategoryModel(
-                  image: 'assets/images/app_icons/ic_numbers.png',
-                  title: 'Numbers',
-                  color: Color.fromARGB(255, 230, 244, 255),
-                  destination: Scaffold(
-                    body: Center(child: Text("Numbers Page")),
-                  ),
-                ),
-              ),
-            ],
+            children: CategoriesList.categoryList.map((category) => CategoryWidget(
+              category: category,
+            )).toList(),
           ),
         ),
       ),
