@@ -8,7 +8,7 @@ class FamilyMembers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenWidget(
-      title: "Colors",
+      title: "Family Members",
       items: FamilyMembersList.familyMembersList,
     );
   }

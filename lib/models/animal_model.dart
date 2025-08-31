@@ -1,3 +1,5 @@
+import 'package:turkish_language_app/utils/audio_player_helper.dart';
+
 class AnimalModel {
   final String image;
   final String engText;
@@ -11,5 +13,7 @@ class AnimalModel {
     required this.sound,
   });
 
-  void playSound() {}
+  void playSound() {
+    AudioPlayerHelper.playAudio(sound);
+  }
 }

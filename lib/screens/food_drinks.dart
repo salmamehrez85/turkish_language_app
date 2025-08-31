@@ -7,6 +7,9 @@ class FoodDrinks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenWidget(title: "Colors", items: FoodDrinksList.foodDrinksList);
+    return ScreenWidget(
+      title: "Food and Drinks",
+      items: FoodDrinksList.foodDrinksList,
+    );
   }
 }

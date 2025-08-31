@@ -7,6 +7,6 @@ class Numbers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenWidget(title: "Colors", items: NumbersList.numbersList);
+    return ScreenWidget(title: "Numbers", items: NumbersList.numbersList);
   }
 }
