@@ -81,4 +81,6 @@ class AnimalsList {
       sound: 'assets/sounds/animals/sheep.mp3',
     ),
   ];
+
+  static var colorsList;
 }

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:turkish_language_app/widgets/appbar_widget.dart';
+import 'package:turkish_language_app/data/family_members.dart';
+import 'package:turkish_language_app/widgets/screen_widget.dart';
 
 class FamilyMembers extends StatelessWidget {
   const FamilyMembers({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: CustomAppBar(title: "Family Members")),
+    return ScreenWidget(
+      title: "Colors",
+      items: FamilyMembersList.familyMembersList,
     );
   }
 }

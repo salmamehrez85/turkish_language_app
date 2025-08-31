@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:turkish_language_app/widgets/appbar_widget.dart';
+import 'package:turkish_language_app/data/food_drinks.dart';
+import 'package:turkish_language_app/widgets/screen_widget.dart';
 
 class FoodDrinks extends StatelessWidget {
   const FoodDrinks({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: CustomAppBar(title: "Food and Drinks")),
-    );
+    return ScreenWidget(title: "Colors", items: FoodDrinksList.foodDrinksList);
   }
 }
